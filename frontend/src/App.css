@@ -1,11 +1,18 @@
-/* src/App.css */
-.App {
-  font-family: Arial, sans-serif;
-  height: 100vh;
+.app-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f2f5;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+Sidebar {
+  flex: 0 0 300px;
+}
+
+ChatArea {
+  flex: 1;
 }

@@ -1,0 +1,26 @@
+.header-container {
+  padding: 5px;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.header-container .app-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex: 1;
+}
+
+.header-container .title {
+  font-size: 0.8rem;
+  flex: 3;
+  text-align: center;
+}

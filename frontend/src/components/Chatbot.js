@@ -15,7 +15,7 @@ const Chatbot = () => {
                 //     message: input
                 // });
                 // const botMessage = response.data[0].text;
-                const botMessage = "Hello, I am a bot!";
+                const botMessage = "Hello, I am a bot! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
                 setMessages(preMessages => [...preMessages, {message: botMessage, sender: "bot"}]);
                 // console.log("from bot",messages);
             }
@@ -38,8 +38,7 @@ const Chatbot = () => {
                 ))}
             </div>
             <div className="input-container">
-                <input
-                    type="text"
+                <textarea
                     value={input}
                     onChange={(event) => setInput(event.target.value)}
                     onKeyPress={handleKeyPress}

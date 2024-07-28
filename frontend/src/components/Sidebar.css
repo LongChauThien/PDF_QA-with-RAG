@@ -1,0 +1,29 @@
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #171717;
+  border-right: 1px solid #ddd;
+  color: white;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.parameter {
+  margin-bottom: 15px;
+}
+
+.parameter label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.parameter input,
+.parameter select,
+.parameter button {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
