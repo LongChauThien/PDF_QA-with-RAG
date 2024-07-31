@@ -11,12 +11,20 @@ const Chatbot = () => {
             setMessages(preMessages => [...preMessages, {message: input, sender: "user"}]);
             setInput("");
             try {
-                // const response = await axios.post("http://localhost:5005/webhooks/rest/webhook", {
-                //     message: input
-                // });
-                // const botMessage = response.data[0].text;
-                const botMessage = "Hello, I am a bot! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-                setMessages(preMessages => [...preMessages, {message: botMessage, sender: "bot"}]);
+                const retrieval_qa_id = sessionStorage.getItem('retrieval_qa_id');
+                const response = await axios.post('http://127.0.0.1:8000/api/v1/chatbot', {
+                    message: input,
+                    id: retrieval_qa_id
+                });
+                console.log(response.data);
+                const botMessages = response.data.result
+                setMessages(preMessages => [...preMessages, {message: botMessages, sender: "bot"}]);
+                // const botMessages = response.data.result.map(doc => ({
+                //     metadata: doc.metadata,
+                //     page_content: doc.page_content
+                // }));
+            
+                // setMessages(preMessages => [...preMessages, ...botMessages.map(message => ({message: message.page_content, sender: "bot"}))]);
                 // console.log("from bot",messages);
             }
             catch (error) {

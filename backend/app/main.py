@@ -1,28 +1,21 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-import os
+from app.api.endpoints import upload, chatbot
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Adjust to your frontend URL
+    allow_origins=["*"],  # Adjust to your frontend URL
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"],  # Allow all HTTP headers
 )
 
-UPLOAD_DIRECTORY = "app/upload_files"
-if not os.path.exists(UPLOAD_DIRECTORY):
-    os.makedirs(UPLOAD_DIRECTORY)
+app.include_router(upload.router, tags=["upload"], prefix="/api/v1")
+app.include_router(chatbot.router, tags=["chatbot"], prefix="/api/v1")
 
-@app.post("/api/v1/upload/")
-async def upload_file(pdf: UploadFile = File(...)):
-    try:
-        file_location = f"{UPLOAD_DIRECTORY}/{pdf.filename}"
-        with open(file_location, "wb+") as file_object:
-            file_object.write(pdf.file.read())
-        return JSONResponse(content={"message": "File uploaded successfully", "file_location": file_location})
-    except Exception as e:
-        return JSONResponse(content={"message": "An error occurred", "error": str(e)})
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
