@@ -11,7 +11,7 @@ def save_file(file: UploadFile):
         file_location = os.path.join(UPLOAD_DIRECTORY, file.filename)
         with open(file_location, "wb+") as file_object:
             file_object.write(file.file.read())
-        return {"message": "File uploaded successfully", "file_location": file_location}
+        return {"message": "File uploaded successfully", "file_location": file_location,"file_name":file.filename}
     except Exception as e:
         return {"message": "An error occurred", "error": str(e)}
     

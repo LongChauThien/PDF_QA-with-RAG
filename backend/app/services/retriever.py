@@ -31,13 +31,13 @@ def get_retriever( file_path: str, embedding_model: str, chunk_size: int=450, ch
 
     try:
         vector_store = Chroma.from_documents(texts, embeddings, collection_metadata={"hnsw:space": "cosine"})
-        chroma_retriever = vector_store.as_retriever(search_kwargs={"k": k_context})
+        chroma_retriever = vector_store.as_retriever(search_kwargs={"k": k_context//2})
     except Exception as e:
         return {"message": "An error occurred when creating Chroma retriever", "error": str(e)}
 
     try:
         bm25_retriever = BM25Retriever.from_documents(texts)
-        bm25_retriever.k = k_context
+        bm25_retriever.k = k_context//2
     except Exception as e:
         return {"message": "An error occurred when creating BM25 retriever", "error": str(e)}
 

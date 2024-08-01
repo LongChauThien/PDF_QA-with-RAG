@@ -1,15 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./Header.css";  
 
+sessionStorage.setItem('file_name', '');
 const Header = () => {
+    const [fileName,setFileName] = useState(sessionStorage.getItem('file_name'));
+
+    useEffect(() => {
+        const handleStorageChange = () => {
+            setFileName(sessionStorage.getItem('file_name'));
+        };
+        window.addEventListener('storage', handleStorageChange);
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
+
     return (
         <div className="header-container">
             <div className="app-name">
                 <h1>PDF Chatbot</h1>
-                <p>Ask questions about your PDF documents</p>
+                <p style={{fontStyle:"italic"}}>Ask questions about your PDF documents</p>
             </div>
             <div className="title">
-                <h1>File name: abcxyz.pdf</h1>
+                <h1>{fileName}</h1>
             </div>
         </div>
     );

@@ -2,29 +2,34 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  position: relative;
 }
 
 .messages-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
   padding: 10px;
   overflow-y: auto;
+  height: calc(80vh - 0.4rem);
   background-color: #212121;
 }
 
 .input-container {
   display: flex;
   padding: 10px;
-  border-top: 1px solid #ddd;
   background-color: #212121;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .input-container textarea {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  /* border: 1px solid #ddd; */
+  border-radius: 30px;
   margin-right: 10px;
   width: 70rem;
   height: 2.5rem;
@@ -36,12 +41,47 @@
 .input-container button {
   padding: 10px 20px;
   border: none;
-  background-color: #4a90e2;
+  background-color: #166bcc;
   color: white;
-  border-radius: 4px;
+  border-radius: 25%;
   cursor: pointer;
 }
 
 .input-container button:hover {
   background-color: #357ab8;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+.hide {
+  display: none;
+}
+.loader-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+}
+.loader-container .text {
+  color: white;
+  padding: 10px;
 }

@@ -45,7 +45,7 @@ async def upload_file(
                     else:
                         retrieval_qa_id = str(id(retrieval_qa))
                         retrievalQA_storage[retrieval_qa_id] = retrieval_qa
-                    return {"retriever_id": retriever_id,"llm_id": llm_id,"retrieval_qa_id": retrieval_qa_id}
+                    return {"retriever_id": retriever_id,"llm_id": llm_id,"retrieval_qa_id": retrieval_qa_id,"file_name":response["file_name"]}
         else:
             raise HTTPException(status_code=500, detail=response.message)
         

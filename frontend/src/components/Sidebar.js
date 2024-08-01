@@ -1,16 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import axios from 'axios';
 import './Sidebar.css';
+import { LoadingContext } from './LoadingContext';
+import { FaArrowUp } from "react-icons/fa";
 
 const Sidebar = () => {
     const [parameters, setParameters] = useState({
         chunkSize: 450,
         chunkOverlap: 200,
-        kContext: 3,
+        kContext: 4,
         embeddingModel: "BAAI/bge-large-en",
         generativeModel: 'phi'
     });
     const [pdfFile, setPdfFile] = useState(null);
+    const { isLoading, setIsLoading } = useContext(LoadingContext);
 
     const handleParameterChange = (e) => {
         const {name, value} = e.target;
@@ -26,6 +29,7 @@ const Sidebar = () => {
 
     const handleFileUpload = () => {
         if (pdfFile) {
+            setIsLoading(true);
             const formData = new FormData();
             formData.append('pdf', pdfFile);
             Object.keys(parameters).forEach(key => {
@@ -36,21 +40,24 @@ const Sidebar = () => {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then(response => {
+                setIsLoading(false);
                 console.log(response.data);
                 sessionStorage.setItem('retriever_id', response.data.retriever_id);
                 sessionStorage.setItem('llm_id', response.data.llm_id);
                 sessionStorage.setItem('retrieval_qa_id', response.data.retrieval_qa_id);
+                sessionStorage.setItem('file_name', response.data.file_name);
             }).catch(error => {
-              if (error.response) {
-                  console.error('Error response:', error.response.data);
-                  console.error('Error status:', error.response.status);
-                  console.error('Error headers:', error.response.headers);
-              } else if (error.request) {
-                  console.error('Error request:', error.request);
-              } else {
-                  console.error('Error message:', error.message);
-              }
-              console.error('Error config:', error.config);
+                setIsLoading(false);
+                if (error.response) {
+                    console.error('Error response:', error.response.data);
+                    console.error('Error status:', error.response.status);
+                    console.error('Error headers:', error.response.headers);
+                } else if (error.request) {
+                    console.error('Error request:', error.request);
+                } else {
+                    console.error('Error message:', error.message);
+                }
+                console.error('Error config:', error.config);
           });
         }
     };
@@ -80,10 +87,10 @@ const Sidebar = () => {
           />
         </div>
         <div className="parameter">
-          <label>k context (1-5)</label>
+          <label>k context (2-5)</label>
           <input
             type="number"
-            min="1"
+            min="2"
             max="5"
             name="kcontext"
             value={parameters.kContext}
@@ -107,15 +114,17 @@ const Sidebar = () => {
             value={parameters.generativeModel}
             onChange={handleParameterChange}
           >
-            <option value="Model 1">phi</option>
-            <option value="Model 2">mistral</option>
-            <option value="Model 3">llama3</option>
+            <option value="phi">phi</option>
+            <option value="mistral">mistral</option>
+            <option value="llama3">llama3</option>
           </select>
         </div>
         <div className="parameter">
           <label>Upload PDF</label>
           <input type="file" accept="application/pdf" onChange={handleFileChange} />
-          <button onClick={handleFileUpload}>Upload</button>
+          <button onClick={handleFileUpload}>Upload
+            <FaArrowUp className='icon'/>
+            </button>
         </div>
       </div>
     );
