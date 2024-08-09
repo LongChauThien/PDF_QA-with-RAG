@@ -28,7 +28,7 @@
     border-radius: 50%;
     box-shadow: 0 40px 0 #0052ec;
     position: relative;
-    animation: loader10-u7f16642c 0.8s ease-in-out alternate infinite;
+    animation: loader10-u7f16642c 2s ease-in-out alternate infinite;
     animation-delay: 0.32s;
     /* top: 50%; */
     margin: -30px 25px 25px 25px; }
@@ -39,13 +39,13 @@
       height: 15px;
       border-radius: 50%;
       box-shadow: 0 40px 0 #ffff;
-      animation: loader10-u7f16642c 0.8s ease-in-out alternate infinite; }
+      animation: loader10-u7f16642c 2s ease-in-out alternate infinite; }
     .loader10::before {
       left: -25px;
-      animation-delay: 0.48s; }
+      animation-delay: 3s; }
     .loader10::after {
       right: -25px;
-      animation-delay: 0.16s; }
+      animation-delay: 1.8s; }
   
   @keyframes loader10-u7f16642c {
     0% {

@@ -24,7 +24,7 @@ const Chatbot = () => {
                     id: retrieval_qa_id
                 });
                 setIsWaiting(false);
-                console.log(response.data);
+                // console.log(response.data);
                 const botMessages = response.data.result
                 setMessages(preMessages => [...preMessages, {message: botMessages, sender: "bot"}]);
                 // const botMessages = response.data.result.map(doc => ({

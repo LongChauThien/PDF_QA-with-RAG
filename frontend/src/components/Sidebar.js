@@ -41,7 +41,7 @@ const Sidebar = () => {
                 }
             }).then(response => {
                 setIsLoading(false);
-                console.log(response.data);
+                // console.log(response.data);
                 sessionStorage.setItem('retriever_id', response.data.retriever_id);
                 sessionStorage.setItem('llm_id', response.data.llm_id);
                 sessionStorage.setItem('retrieval_qa_id', response.data.retrieval_qa_id);
@@ -92,7 +92,7 @@ const Sidebar = () => {
             type="number"
             min="2"
             max="5"
-            name="kcontext"
+            name="kContext"
             value={parameters.kContext}
             onChange={handleParameterChange}
           />

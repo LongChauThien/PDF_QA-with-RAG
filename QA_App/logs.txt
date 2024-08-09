@@ -1,0 +1,177 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://172.28.0.12:8502
+  External URL: http://34.124.221.137:8502
+
+  Stopping...
+/python3.10/dist-packages/langchain/__init__.py:29: UserWarning: Importing PromptTemplate from langchain root module is no longer supported. Please use langchain.prompts.PromptTemplate instead.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/langchain/__init__.py:29: UserWarning: Importing LLMChain from langchain root module is no longer supported. Please use langchain.chains.LLMChain instead.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/langchain/llms/__init__.py:548: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.llms import CTransformers`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/langchain/vectorstores/__init__.py:35: LangChainDeprecationWarning: Importing vector stores from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.vectorstores import Chroma`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/langchain/embeddings/__init__.py:29: LangChainDeprecationWarning: Importing embeddings from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.embeddings import HuggingFaceBgeEmbeddings`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/langchain/document_loaders/__init__.py:36: LangChainDeprecationWarning: Importing document loaders from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.document_loaders import PyPDFLoader`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/langchain/retrievers/__init__.py:46: LangChainDeprecationWarning: Importing this retriever from langchain is deprecated. Importing it from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.retrievers import BM25Retriever`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/langchain/llms/__init__.py:548: LangChainDeprecationWarning: Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.llms import LlamaCpp`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+ggml_init_cublas: GGML_CUDA_FORCE_MMQ:   no
+ggml_init_cublas: CUDA_USE_TENSOR_CORES: yes
+ggml_init_cublas: found 1 CUDA devices:
+  Device 0: Tesla T4, compute capability 7.5, VMM: yes
+llama_model_loader: loaded meta data with 21 key-value pairs and 291 tensors from ../zephyr-7b-beta.Q4_K_M.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = huggingfaceh4_zephyr-7b-beta
+llama_model_loader: - kv   2:                       llama.context_length u32              = 32768
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 32
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                       llama.rope.freq_base f32              = 10000.000000
+llama_model_loader: - kv  11:                          general.file_type u32              = 15
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 2
+llama_model_loader: - kv  20:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 14336
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 7B
+llm_load_print_meta: model ftype      = Q4_K - Medium
+llm_load_print_meta: model params     = 7.24 B
+llm_load_print_meta: model size       = 4.07 GiB (4.83 BPW) 
+llm_load_print_meta: general.name     = huggingfaceh4_zephyr-7b-beta
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: PAD token        = 2 '</s>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size       =    0.11 MiB
+llm_load_tensors: using CUDA for GPU acceleration
+llm_load_tensors: system memory used  =   70.42 MiB
+llm_load_tensors: VRAM used           = 4095.05 MiB
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+..................................................................................................
+llama_new_context_with_model: n_ctx      = 2048
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_new_context_with_model: KV self size  =  256.00 MiB, K (f16):  128.00 MiB, V (f16):  128.00 MiB
+llama_build_graph: non-view tensors processed: 676/676
+llama_new_context_with_model: compute buffer total size = 159.19 MiB
+llama_new_context_with_model: VRAM scratch buffer: 156.00 MiB
+llama_new_context_with_model: total VRAM used: 4251.06 MiB (model: 4095.05 MiB, context: 156.00 MiB)
+AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 1 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | 
+.gitattributes:   0%|          | 0.00/1.52k [00:00<?, ?B/s].gitattributes: 100%|██████████| 1.52k/1.52k [00:00<00:00, 4.38MB/s]
+1_Pooling/config.json:   0%|          | 0.00/191 [00:00<?, ?B/s]1_Pooling/config.json: 100%|██████████| 191/191 [00:00<00:00, 381kB/s]
+README.md:   0%|          | 0.00/90.3k [00:00<?, ?B/s]README.md: 100%|██████████| 90.3k/90.3k [00:00<00:00, 125MB/s]
+config.json:   0%|          | 0.00/720 [00:00<?, ?B/s]config.json: 100%|██████████| 720/720 [00:00<00:00, 2.52MB/s]
+config_sentence_transformers.json:   0%|          | 0.00/124 [00:00<?, ?B/s]config_sentence_transformers.json: 100%|██████████| 124/124 [00:00<00:00, 455kB/s]
+model.safetensors:   0%|          | 0.00/1.34G [00:00<?, ?B/s]model.safetensors:   2%|▏         | 31.5M/1.34G [00:00<00:04, 311MB/s]model.safetensors:   6%|▋         | 83.9M/1.34G [00:00<00:03, 401MB/s]model.safetensors:   9%|▉         | 126M/1.34G [00:00<00:02, 408MB/s] model.safetensors:  13%|█▎        | 168M/1.34G [00:00<00:03, 362MB/s]model.safetensors:  16%|█▌        | 210M/1.34G [00:00<00:03, 316MB/s]model.safetensors:  19%|█▉        | 252M/1.34G [00:00<00:03, 303MB/s]model.safetensors:  21%|██        | 283M/1.34G [00:00<00:03, 296MB/s]model.safetensors:  24%|██▍       | 325M/1.34G [00:00<00:03, 325MB/s]model.safetensors:  27%|██▋       | 367M/1.34G [00:01<00:03, 302MB/s]model.safetensors:  30%|██▉       | 398M/1.34G [00:01<00:03, 280MB/s]model.safetensors:  32%|███▏      | 430M/1.34G [00:01<00:03, 267MB/s]model.safetensors:  34%|███▍      | 461M/1.34G [00:01<00:03, 245MB/s]model.safetensors:  37%|███▋      | 493M/1.34G [00:01<00:03, 231MB/s]model.safetensors:  39%|███▉      | 524M/1.34G [00:05<00:28, 29.0MB/s]model.safetensors:  41%|████      | 545M/1.34G [00:05<00:27, 28.5MB/s]model.safetensors:  43%|████▎     | 577M/1.34G [00:06<00:19, 39.3MB/s]model.safetensors:  45%|████▌     | 608M/1.34G [00:06<00:13, 53.1MB/s]model.safetensors:  48%|████▊     | 640M/1.34G [00:06<00:10, 70.0MB/s]model.safetensors:  50%|█████     | 671M/1.34G [00:06<00:07, 89.0MB/s]model.safetensors:  52%|█████▏    | 692M/1.34G [00:06<00:06, 101MB/s] model.safetensors:  54%|█████▍    | 724M/1.34G [00:06<00:05, 123MB/s]model.safetensors:  56%|█████▋    | 755M/1.34G [00:06<00:04, 142MB/s]model.safetensors:  59%|█████▊    | 786M/1.34G [00:06<00:03, 164MB/s]model.safetensors:  61%|██████    | 818M/1.34G [00:07<00:02, 183MB/s]model.safetensors:  63%|██████▎   | 849M/1.34G [00:07<00:02, 200MB/s]model.safetensors:  66%|██████▋   | 891M/1.34G [00:07<00:01, 237MB/s]model.safetensors:  69%|██████▉   | 923M/1.34G [00:07<00:01, 254MB/s]model.safetensors:  71%|███████   | 954M/1.34G [00:07<00:01, 211MB/s]model.safetensors:  74%|███████▎  | 986M/1.34G [00:07<00:01, 194MB/s]model.safetensors:  76%|███████▌  | 1.02G/1.34G [00:08<00:01, 191MB/s]model.safetensors:  77%|███████▋  | 1.04G/1.34G [00:08<00:01, 186MB/s]model.safetensors:  80%|███████▉  | 1.07G/1.34G [00:08<00:01, 198MB/s]model.safetensors:  81%|████████▏ | 1.09G/1.34G [00:08<00:01, 187MB/s]model.safetensors:  84%|████████▎ | 1.12G/1.34G [00:08<00:01, 201MB/s]model.safetensors:  85%|████████▌ | 1.14G/1.34G [00:08<00:00, 202MB/s]model.safetensors:  88%|████████▊ | 1.17G/1.34G [00:08<00:00, 209MB/s]model.safetensors:  90%|████████▉ | 1.21G/1.34G [00:08<00:00, 212MB/s]model.safetensors:  92%|█████████▏| 1.24G/1.34G [00:09<00:00, 217MB/s]model.safetensors:  95%|█████████▍| 1.27G/1.34G [00:09<00:00, 225MB/s]model.safetensors:  97%|█████████▋| 1.30G/1.34G [00:09<00:00, 228MB/s]model.safetensors:  99%|█████████▉| 1.33G/1.34G [00:09<00:00, 218MB/s]model.safetensors: 100%|██████████| 1.34G/1.34G [00:09<00:00, 140MB/s]
+pytorch_model.bin:   0%|          | 0.00/1.34G [00:00<?, ?B/s]pytorch_model.bin:   2%|▏         | 31.5M/1.34G [00:00<00:04, 287MB/s]pytorch_model.bin:   5%|▌         | 73.4M/1.34G [00:00<00:03, 330MB/s]pytorch_model.bin:   9%|▊         | 115M/1.34G [00:00<00:04, 255MB/s] pytorch_model.bin:  11%|█         | 147M/1.34G [00:00<00:05, 234MB/s]pytorch_model.bin:  13%|█▎        | 178M/1.34G [00:00<00:05, 232MB/s]pytorch_model.bin:  16%|█▌        | 210M/1.34G [00:01<00:13, 80.8MB/s]pytorch_model.bin:  18%|█▊        | 241M/1.34G [00:01<00:10, 101MB/s] pytorch_model.bin:  20%|██        | 273M/1.34G [00:01<00:08, 124MB/s]pytorch_model.bin:  23%|██▎       | 304M/1.34G [00:02<00:06, 150MB/s]pytorch_model.bin:  25%|██▌       | 336M/1.34G [00:02<00:05, 175MB/s]pytorch_model.bin:  27%|██▋       | 367M/1.34G [00:02<00:04, 197MB/s]pytorch_model.bin:  30%|██▉       | 398M/1.34G [00:02<00:05, 176MB/s]pytorch_model.bin:  32%|███▏      | 430M/1.34G [00:02<00:05, 171MB/s]pytorch_model.bin:  34%|███▎      | 451M/1.34G [00:02<00:05, 172MB/s]pytorch_model.bin:  35%|███▌      | 472M/1.34G [00:02<00:05, 167MB/s]pytorch_model.bin:  38%|███▊      | 503M/1.34G [00:03<00:04, 192MB/s]pytorch_model.bin:  39%|███▉      | 524M/1.34G [00:06<00:40, 20.0MB/s]pytorch_model.bin:  42%|████▏     | 566M/1.34G [00:07<00:23, 32.9MB/s]pytorch_model.bin:  45%|████▌     | 608M/1.34G [00:07<00:14, 49.3MB/s]pytorch_model.bin:  48%|████▊     | 640M/1.34G [00:07<00:11, 63.6MB/s]pytorch_model.bin:  51%|█████     | 682M/1.34G [00:07<00:07, 84.9MB/s]pytorch_model.bin:  53%|█████▎    | 713M/1.34G [00:07<00:06, 95.9MB/s]pytorch_model.bin:  56%|█████▌    | 744M/1.34G [00:07<00:05, 104MB/s] pytorch_model.bin:  57%|█████▋    | 765M/1.34G [00:11<00:25, 22.7MB/s]pytorch_model.bin:  59%|█████▊    | 786M/1.34G [00:11<00:20, 27.3MB/s]pytorch_model.bin:  60%|██████    | 807M/1.34G [00:11<00:15, 34.7MB/s]pytorch_model.bin:  63%|██████▎   | 839M/1.34G [00:12<00:10, 50.1MB/s]pytorch_model.bin:  65%|██████▍   | 870M/1.34G [00:12<00:06, 67.4MB/s]pytorch_model.bin:  67%|██████▋   | 902M/1.34G [00:12<00:04, 90.0MB/s]pytorch_model.bin:  70%|██████▉   | 933M/1.34G [00:12<00:03, 105MB/s] pytorch_model.bin:  71%|███████   | 954M/1.34G [00:12<00:03, 109MB/s]pytorch_model.bin:  73%|███████▎  | 975M/1.34G [00:12<00:03, 121MB/s]pytorch_model.bin:  75%|███████▌  | 1.01G/1.34G [00:12<00:02, 143MB/s]pytorch_model.bin:  77%|███████▋  | 1.04G/1.34G [00:13<00:01, 152MB/s]pytorch_model.bin:  79%|███████▉  | 1.06G/1.34G [00:14<00:06, 46.4MB/s]pytorch_model.bin:  81%|████████  | 1.08G/1.34G [00:14<00:04, 56.6MB/s]pytorch_model.bin:  83%|████████▎ | 1.11G/1.34G [00:14<00:03, 72.1MB/s]pytorch_model.bin:  84%|████████▍ | 1.13G/1.34G [00:15<00:02, 85.4MB/s]pytorch_model.bin:  88%|████████▊ | 1.17G/1.34G [00:15<00:01, 120MB/s] pytorch_model.bin:  89%|████████▉ | 1.20G/1.34G [00:15<00:01, 130MB/s]pytorch_model.bin:  91%|█████████ | 1.22G/1.34G [00:15<00:01, 119MB/s]pytorch_model.bin:  92%|█████████▏| 1.24G/1.34G [00:15<00:00, 133MB/s]pytorch_model.bin:  94%|█████████▍| 1.26G/1.34G [00:15<00:00, 147MB/s]pytorch_model.bin:  95%|█████████▌| 1.28G/1.34G [00:17<00:01, 38.3MB/s]pytorch_model.bin:  99%|█████████▊| 1.32G/1.34G [00:17<00:00, 64.1MB/s]pytorch_model.bin: 100%|██████████| 1.34G/1.34G [00:17<00:00, 76.7MB/s]
+sentence_bert_config.json:   0%|          | 0.00/52.0 [00:00<?, ?B/s]sentence_bert_config.json: 100%|██████████| 52.0/52.0 [00:00<00:00, 211kB/s]
+special_tokens_map.json:   0%|          | 0.00/125 [00:00<?, ?B/s]special_tokens_map.json: 100%|██████████| 125/125 [00:00<00:00, 475kB/s]
+tokenizer.json:   0%|          | 0.00/711k [00:00<?, ?B/s]tokenizer.json: 100%|██████████| 711k/711k [00:00<00:00, 3.00MB/s]tokenizer.json: 100%|██████████| 711k/711k [00:00<00:00, 2.98MB/s]
+tokenizer_config.json:   0%|          | 0.00/366 [00:00<?, ?B/s]tokenizer_config.json: 100%|██████████| 366/366 [00:00<00:00, 1.39MB/s]
+vocab.txt:   0%|          | 0.00/232k [00:00<?, ?B/s]vocab.txt: 100%|██████████| 232k/232k [00:00<00:00, 72.8MB/s]
+modules.json:   0%|          | 0.00/349 [00:00<?, ?B/s]modules.json: 100%|██████████| 349/349 [00:00<00:00, 1.55MB/s]
+/usr/local/lib/python3.10/dist-packages/langchain_core/_api/deprecation.py:117: LangChainDeprecationWarning: The function `__call__` was deprecated in LangChain 0.1.0 and will be removed in 0.2.0. Use invoke instead.
+  warn_deprecated(
+
+
+[1m> Entering new RetrievalQA chain...[0m
+
+    RAGA S1 is a framework proposed in a paper for automatically assessing the accuracy and relevance of generated responses to questions based on given contexts. It is available for download at the link provided in the text, which can be found in the references section with the arXiv identifier 2309.15217v1 under the category cs.CL (computer science, natural language processing). The framework aims to address issues related to assessing generated responses by presenting a new evaluation metric called context relevance score (CRS), which is computed based on the number of extracted sentences and the total number of sentences in the given contexts. This metric helps in determining the degree to which the framework's metrics align with human assessments of faithfulness and answer accuracy. The paper also cites previous research, including "Language models (mostly) know what they know" by Ganguli et al., "Large language models struggle to learn long-tail knowledge" by Kandpal et al., and "Generalization of pretrained language models is limited by spurious correlations in the training data" by Khandelwal et al.
+llama_print_timings:        load time =    4790.33 ms
+llama_print_timings:      sample time =     148.82 ms /   241 runs   (    0.62 ms per token,  1619.44 tokens per second)
+llama_print_timings: prompt eval time =    5634.86 ms /   528 tokens (   10.67 ms per token,    93.70 tokens per second)
+llama_print_timings:        eval time =   18489.65 ms /   240 runs   (   77.04 ms per token,    12.98 tokens per second)
+llama_print_timings:       total time =   25296.28 ms
+Llama.generate: prefix-match hit
+
+[1m> Finished chain.[0m
+
+
+[1m> Entering new RetrievalQA chain...[0m
+
+    RAGAS (RAGA Sis) is a framework for automated assessment of text generation systems proposed in this paper to address issues related to retrieval memory size and efficiency. It trades off these factors through data compression techniques used for the retrieval memory. The framework uses local optimization instead of global optimization, which allows for faster inference times by using query words with similar hidden representations from a datastore as target words during inference. Meng et al. (2021) propose heuristics to reduce search time in this method. RAGAS is available on GitHub at https://github.com/exploding-gradients/ragas. The reward scores used by previous approaches are obtained through non-parametric methods, while Zheng et al. (2021a) propose using a different approach to calculate these scores.
+llama_print_timings:        load time =    4790.33 ms
+llama_print_timings:      sample time =     127.14 ms /   179 runs   (    0.71 ms per token,  1407.87 tokens per second)
+llama_print_timings: prompt eval time =    2370.18 ms /   338 tokens (    7.01 ms per token,   142.61 tokens per second)
+llama_print_timings:        eval time =   14237.34 ms /   178 runs   (   79.99 ms per token,    12.50 tokens per second)
+llama_print_timings:       total time =   17655.72 ms
+
+[1m> Finished chain.[0m
+  Stopping...

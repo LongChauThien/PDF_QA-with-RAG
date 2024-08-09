@@ -9,10 +9,7 @@ const Header = () => {
         const handleStorageChange = () => {
             setFileName(sessionStorage.getItem('file_name'));
         };
-        window.addEventListener('storage', handleStorageChange);
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
+        setInterval(handleStorageChange, 5000);
     }, []);
 
     return (

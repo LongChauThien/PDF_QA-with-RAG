@@ -1,0 +1,11 @@
+chainlit 
+ctransformers[cuda]
+torch
+sentence_transformers
+accelerate
+chromadb 
+langchain
+pypdf 
+rank_bm25
+streamlit
+streamlit-extras
