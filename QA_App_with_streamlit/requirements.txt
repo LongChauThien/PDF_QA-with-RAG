@@ -9,3 +9,4 @@ pypdf
 rank_bm25
 streamlit
 streamlit-extras
+ollama
