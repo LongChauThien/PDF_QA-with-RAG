@@ -8,14 +8,14 @@ The backend is built with FastAPI and provides endpoints for:
 Chatbot Interactions: Handling user queries and generating responses.
 File Uploads: Uploading and processing PDF documents.
 ### Installation
-    1. Navigate to the backend/ directory.
-    2. Install the required packages:
+1. Navigate to the backend/ directory.
+2. Install the required packages:
 ```bash
     pip install -r requirements.txt
 ```
 ### Running the Backend
-    1. Navigate to the backend/ directory.
-    2. Start the FastAPI server:
+1. Navigate to the backend/ directory.
+2. Start the FastAPI server:
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -23,14 +23,14 @@ uvicorn app.main:app --reload
 The frontend is a React application providing the user interface for interacting with the backend.
 
 ### Installation
-    1. Navigate to the frontend/ directory.
-    2. Install the required packages:
+1. Navigate to the frontend/ directory.
+2. Install the required packages:
 ```bash
 npm install
 ```
 ### Running the Frontend
-    1. Navigate to the frontend/ directory.
-    2. Start the React development server:
+1. Navigate to the frontend/ directory.
+2. Start the React development server:
 ```bash
 npm start
 ```
@@ -38,14 +38,14 @@ npm start
 The Streamlit app provides an interactive interface for the question-answering system.
 
 ### Installation
-    1. Navigate to the QA_App_with_streamlit/ directory.
-    2. Install the required packages:
+1. Navigate to the QA_App_with_streamlit/ directory.
+2. Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
 ### Running the Streamlit App
-    1. Navigate to the QA_App_with_streamlit/ directory.
-    2. Start the Streamlit server:
+1. Navigate to the QA_App_with_streamlit/ directory.
+2. Start the Streamlit server:
 ```bash
 streamlit run QA_App.ipynb
 ```
