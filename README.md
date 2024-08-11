@@ -1,6 +1,7 @@
 # PDF_QA with RAG
 ## Overview
-PDF_QA with RAG is a project that leverages Retrieval-Augmented Generation (RAG) to build a robust question-answering system for PDF documents. The project integrates a FastAPI backend, a React frontend, and a Streamlit app for different aspects of the application.
+PDF_QA with RAG is a project that leverages Retrieval-Augmented Generation (RAG) to build a robust question-answering system for PDF documents. The project integrates a FastAPI backend, a React frontend, and a Streamlit app for different aspects of the application. <br>
+Link demo: https://youtu.be/3qHeQooT2EE
 
 ## Backend
 The backend is built with FastAPI and provides endpoints for:
